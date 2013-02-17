@@ -1,0 +1,225 @@
+@mixin clearfix{
+  zoom:1;
+  &:after{
+    display:block; content:"";
+    height:0; clear:both; } } 
+$top :#D593FF;
+$bottom:#8F19EF;
+$borcolor:lighten( black, 20% );
+@mixin linerar-gradient ($top, $bottom)
+{
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top, $top 0%, $bottom 17%) fixed; /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(17%,$bottom)) fixed; /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, $top 0%,$bottom 17%) fixed; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, $top 0%,$bottom 17%) fixed; /* Opera 11.10+ */
+background: -ms-linear-gradient(top, $top 0%,$bottom 17%) fixed; /* IE10+ */
+background: linear-gradient(to bottom, $top 0%,$bottom 17%) fixed; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ) fixed; /* IE6-9 */
+}
+body
+{     height:100%;
+      margin:0; 
+      color:white;
+      a {
+	  color:white;
+	  font-size:20px;
+	  text-decoration:none;
+	       &:hover
+	       {
+	          text-decoration:underline;
+	       }
+	    }
+	  ul
+	  {
+	  list-style-type:none;
+	  }
+      @include linerar-gradient($top,$bottom);
+	  @include clearfix;
+	  &:after { @include clearfix;}
+	  header{
+
+              @include clearfix;
+              #header-container
+                  {
+                     @include clearfix;
+                  }
+             #main-nav-list
+                  {
+                     @include clearfix;
+                  }
+           }
+}
+              #header-container
+                  {
+					 margin:20px;
+					 #logo-container
+                     {
+                        float:left;
+                     }
+                     #reg-form-container
+                     {
+					 		 margin-top:10px;
+							 margin-right:40px; 
+                      float:right;
+					  input{
+					         margin-top:10px;
+					         border:1px solid $borcolor;
+					         border-radius:20px;
+							 outline:none;
+							 background-color:  lighten( $bottom, 10% ) 
+
+					       }
+					  button{ 
+					         margin-right:10px;
+					         color:white;
+							 background-color: darken($top,10%);
+					         border-radius:10px;
+							 border-top:1px solid white;
+							 border-left:1px solid white;
+							 width:80px;
+							 height:25px;
+							 margin-top:5px;
+							 
+
+							 &:hover{
+							         background-color: $bottom;
+							        }
+						     
+						   }
+                     }
+                  }
+   footer{ 
+   clear:both;
+   text-align:center;
+   }
+
+#main-nav-list {
+ border:1px solid black;
+ border-radius: 15px;
+ width:75%;
+ margin:10px 20px 10px 30px;
+ padding:10px;
+ position:relative;
+ > li{
+      float:left;
+	  display:inline-block;
+	  margin:5px;
+	  }
+@include clearfix;
+}
+section{
+      width:75%;
+	  float:left;
+	  margin-top:15px;
+	  margin-left:15px;
+	  article
+	  {
+	   line-height:20px;
+	    padding:10px 15px 10px 20px;
+		margin-top:15px;
+	    margin-bottom:10px;
+	    border:1px solid black;
+		border-radius:15px;
+		@include clearfix;
+		h1
+		        {
+				margin-bottom:5px;
+		        }
+		header+p{
+		          margin:0;
+		        }
+		footer{
+		height:40px;
+		padding:0;
+		margin-top:0;
+		float:right;
+		      p{
+			     margin:0;
+			     a{
+				 font-size:16px;
+				   display:inline-block;
+				   margin:0;
+				   padding:0;
+				   text-decoration:none;
+				   opacity:.5;
+			      }
+			   }
+		      }
+	  }
+
+	
+	    }
+
+aside {
+    width: 20%;
+    float: right;
+    margin-top: 30px;
+    margin-right: 70px;
+
+    >ul > li {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        h2 {
+            font-size: 16px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-left: 12px;
+            font-size: 14px;
+
+            a {
+                font-size: 16px;
+                color: lighten( black, 60% );
+            }
+
+        }
+
+        >ul > li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            opacity: .8;
+            position: relative;
+
+            &:before {
+                height: 5px;
+                width: 15px;
+                content: "";
+                position: absolute;
+                border: 2px solid $borcolor;
+                border-radius: 100%;
+                left: -25px;
+                top: 5px;
+                background-color: darken($top,40%);
+            }
+        }
+    }
+}
+
+ body header nav ul li ul.sub-nav-list {
+                    position: absolute;
+                    display: none;
+                    background-color: rgba(179, 94, 243, 0.9);
+                    border-radius: 5px;
+					
+                }
+ body header nav ul li.selected {
+                        font-weight: bold;
+                    }
+                    body header nav ul li:hover > a + ul {
+                        display: block;
+                    }
+
+            strong {
+                color: lighten( black, 60% );
+            }
+
+            em {
+				color: lighten( black, 60% );
+            }

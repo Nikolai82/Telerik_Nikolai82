@@ -1,0 +1,213 @@
+﻿body,
+header,
+footer,
+aside,
+section,
+div,
+p,
+ul,
+li,
+a,
+article,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body {
+  background: #1e5799;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #d593ff 0%, #8f19ef 17%) fixed;
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d593ff), color-stop(17%, #8f19ef)) fixed;
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #d593ff 0%, #8f19ef 17%) fixed;
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #d593ff 0%, #8f19ef 17%) fixed;
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #d593ff 0%, #8f19ef 17%) fixed;
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #d593ff 0%, #8f19ef 17%) fixed;
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0) fixed;
+  /* IE6-9 */
+
+  color: white;
+}
+body header #header-container {
+  margin: 20px 10px 10px 10px;
+  zoom: 1;
+}
+body header #header-container #logo-container {
+  float: left;
+}
+body header #header-container #reg-form-container {
+  margin-right: 100px;
+  float: right;
+}
+body header #header-container #reg-form-container input {
+  height: 18px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  border: 1px solid #333333;
+  background-color: #c160ff;
+}
+body header #header-container #reg-form-container button {
+  margin-left: -5px;
+  height: 30px;
+  width: 80px;
+  color: white;
+  border-radius: 10px;
+  background-color: #cb79ff;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+body header #header-container #reg-form-container button:hover {
+  background-color: #8f19ef;
+}
+body header #header-container:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body header #main-nav-list {
+  width: 75%;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  zoom: 1;
+}
+body header #main-nav-list:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body header #main-nav-list li {
+  display: inline-block;
+  margin-right: 20px;
+  list-style: none;
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+body header #main-nav-list li:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body header #main-nav-list li ul li {
+  clear: both;
+}
+body header #main-nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+body section {
+  width: 70%;
+  float: left;
+}
+body section article {
+  padding: 20px 10px 10px 15px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+body section article h1 {
+  font-size: 18px;
+}
+body section article p {
+  font-size: 14px;
+}
+body section article footer {
+  text-align: right;
+  margin-bottom: 15px;
+}
+body section article footer p {
+  font-size: 14px;
+}
+body section article footer a {
+  text-decoration: none;
+  color: white;
+  opacity: .5;
+}
+body aside {
+  float: left;
+  width: 20%;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+body aside a {
+  color: #999999;
+  text-decoration: none;
+}
+body aside em {
+  color: #999999;
+}
+body aside strong {
+  color: #999999;
+}
+body aside ul {
+  list-style: none;
+}
+body aside > ul > li {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+body aside > ul > li h2 {
+  font-size: 16px;
+  margin: 10px;
+}
+body aside > ul > li p {
+  margin: 10px 10px 10px 10px;
+  font-size: 14px;
+}
+body aside > ul > li > ul > li {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: url("images/li-dot.png") no-repeat;
+  background-position: 0 50%;
+  padding-left: 25px;
+}
+body footer {
+  clear: both;
+  text-align: center;
+}
+body header nav ul li ul.sub-nav-list {
+  position: absolute;
+  display: none;
+  background-color: rgba(179, 94, 243, 0.9);
+  border-radius: 5px;
+  width: 200px;
+}
+body header nav ul li.selected {
+  font-weight: bold;
+}
+body header nav ul li:hover > a + ul {
+  display: block;
+}
